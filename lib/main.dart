@@ -20,10 +20,23 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to save4thPillar'),
         ),
         body: Center(
-          child: Text(wordPair.asPascalCase),
+          child: RandomWords()
         ),
       ),
     );
   }
 }
 
+
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => RandomWordsState();
+}
+
+class RandomWordsState extends State<RandomWords> {
+  @override
+  Widget build(BuildContext context) {
+    final wordPair = WordPair.random();
+    return Text(wordPair.asPascalCase);
+  }
+}
