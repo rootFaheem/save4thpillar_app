@@ -1,4 +1,4 @@
-package com.example.save4thpillar_app
+package com.example.save4thpillar
 
 import android.os.Bundle
 
